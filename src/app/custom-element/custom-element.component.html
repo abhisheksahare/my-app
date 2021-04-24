@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="custom-element" (click)="input.focus()">
+    <span class="tag-container">
+      <span style="margin: 5px;" *ngFor="let elements of userInputArray; let i=index;">
+        <span class="tag">
+          {{elements}} <span class="cross" (click)="deleteTag(i)">&#10060;</span>
+        </span>
+      </span>
+      <input #input style="border: none;" name="userInput" placeholder="Enter a value" [(ngModel)]="userInput"
+        (keypress)="onKeypressEvent($event)">
+    </span>
+      <div class="error" *ngIf="showError">Please enter a value</div>
+    </div>
+
+</div>
