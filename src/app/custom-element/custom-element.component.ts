@@ -17,7 +17,6 @@ export class CustomElementComponent implements OnInit {
   }
 
   onKeypressEvent(event) {
-    console.log(event);
     this.showError = false;
     if (event.target.value && (event.key == ',' || event.key.toLowerCase() == 'enter')) {
       this.userInputArray.push(event.target.value);
